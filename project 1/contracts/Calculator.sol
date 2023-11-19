@@ -25,5 +25,3 @@ contract Calculator{
 
 
 }
-
-//test

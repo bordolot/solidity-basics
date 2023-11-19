@@ -6,11 +6,11 @@
 
 # print(byte_array)
 
-# with open("../../contracts/Calculator.sol", 'r') as file:
-#     simple_storage_file = file.read()
+with open("./solidity learning/project 1/contracts/Calculator.sol", 'r') as file:
+    simple_storage_file = file.read()
+    print(simple_storage_file)
 
-# with open("../../contracts/Calculator.sol", 'r') as file:
-#     simple_storage_file = file.read()
+# with open("./solidity learning/project 1/draft/example.py", 'r') as file:
+    # simple_storage_file = file.read()
 
-import os.path
-os.path.isfile("./example.py") 
+
