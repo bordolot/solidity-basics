@@ -4,7 +4,7 @@
 
 pragma solidity ^0.8.0;
 
-contract Calculator{
+contract Calculator {
     uint result = 0;
 
     function add(uint256 num) public {
@@ -19,9 +19,7 @@ contract Calculator{
         result *= num;
     }
 
-    function get() public view returns (uint256){
+    function get() public view returns (uint256) {
         return result;
     }
-
-
 }
