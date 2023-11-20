@@ -1,0 +1,77 @@
+{
+    "contracts": {
+        "Calculator.sol": {
+            "Calculator": {
+                "abi": [
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "num",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "add",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [],
+                        "name": "get",
+                        "outputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "",
+                                "type": "uint256"
+                            }
+                        ],
+                        "stateMutability": "view",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "num",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "multiply",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    },
+                    {
+                        "inputs": [
+                            {
+                                "internalType": "uint256",
+                                "name": "num",
+                                "type": "uint256"
+                            }
+                        ],
+                        "name": "subtract",
+                        "outputs": [],
+                        "stateMutability": "nonpayable",
+                        "type": "function"
+                    }
+                ],
+                "evm": {
+                    "bytecode": {
+                        "generatedSources": [],
+                        "linkReferences": {},
+                        "object": "60806040526000805534801561001457600080fd5b506102ef806100246000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80631003e2d2146100515780631dc05f171461006d5780636d4ce63c14610089578063c6888fa1146100a7575b600080fd5b61006b60048036038101906100669190610132565b6100c3565b005b61008760048036038101906100829190610132565b6100de565b005b6100916100f9565b60405161009e919061016a565b60405180910390f35b6100c160048036038101906100bc9190610132565b610102565b005b806000808282546100d49190610185565b9250508190555050565b806000808282546100ef9190610235565b9250508190555050565b60008054905090565b8060008082825461011391906101db565b9250508190555050565b60008135905061012c816102a2565b92915050565b60006020828403121561014457600080fd5b60006101528482850161011d565b91505092915050565b61016481610269565b82525050565b600060208201905061017f600083018461015b565b92915050565b600061019082610269565b915061019b83610269565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff038211156101d0576101cf610273565b5b828201905092915050565b60006101e682610269565b91506101f183610269565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff048311821515161561022a57610229610273565b5b828202905092915050565b600061024082610269565b915061024b83610269565b92508282101561025e5761025d610273565b5b828203905092915050565b6000819050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6102ab81610269565b81146102b657600080fd5b5056fea2646970667358221220c6b3b609a932437b0b0eae99a4777dde79117818710d97f7b415c23f7dc3ea7164736f6c63430008000033",
+                        "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 SSTORE CALLVALUE DUP1 ISZERO PUSH2 0x14 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x2EF DUP1 PUSH2 0x24 PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x4C JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x1003E2D2 EQ PUSH2 0x51 JUMPI DUP1 PUSH4 0x1DC05F17 EQ PUSH2 0x6D JUMPI DUP1 PUSH4 0x6D4CE63C EQ PUSH2 0x89 JUMPI DUP1 PUSH4 0xC6888FA1 EQ PUSH2 0xA7 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x6B PUSH1 0x4 DUP1 CALLDATASIZE SUB DUP2 ADD SWAP1 PUSH2 0x66 SWAP2 SWAP1 PUSH2 0x132 JUMP JUMPDEST PUSH2 0xC3 JUMP JUMPDEST STOP JUMPDEST PUSH2 0x87 PUSH1 0x4 DUP1 CALLDATASIZE SUB DUP2 ADD SWAP1 PUSH2 0x82 SWAP2 SWAP1 PUSH2 0x132 JUMP JUMPDEST PUSH2 0xDE JUMP JUMPDEST STOP JUMPDEST PUSH2 0x91 PUSH2 0xF9 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0x9E SWAP2 SWAP1 PUSH2 0x16A JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0xC1 PUSH1 0x4 DUP1 CALLDATASIZE SUB DUP2 ADD SWAP1 PUSH2 0xBC SWAP2 SWAP1 PUSH2 0x132 JUMP JUMPDEST PUSH2 0x102 JUMP JUMPDEST STOP JUMPDEST DUP1 PUSH1 0x0 DUP1 DUP3 DUP3 SLOAD PUSH2 0xD4 SWAP2 SWAP1 PUSH2 0x185 JUMP JUMPDEST SWAP3 POP POP DUP2 SWAP1 SSTORE POP POP JUMP JUMPDEST DUP1 PUSH1 0x0 DUP1 DUP3 DUP3 SLOAD PUSH2 0xEF SWAP2 SWAP1 PUSH2 0x235 JUMP JUMPDEST SWAP3 POP POP DUP2 SWAP1 SSTORE POP POP JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD SWAP1 POP SWAP1 JUMP JUMPDEST DUP1 PUSH1 0x0 DUP1 DUP3 DUP3 SLOAD PUSH2 0x113 SWAP2 SWAP1 PUSH2 0x1DB JUMP JUMPDEST SWAP3 POP POP DUP2 SWAP1 SSTORE POP POP JUMP JUMPDEST PUSH1 0x0 DUP2 CALLDATALOAD SWAP1 POP PUSH2 0x12C DUP2 PUSH2 0x2A2 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x144 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x0 PUSH2 0x152 DUP5 DUP3 DUP6 ADD PUSH2 0x11D JUMP JUMPDEST SWAP2 POP POP SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH2 0x164 DUP2 PUSH2 0x269 JUMP JUMPDEST DUP3 MSTORE POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 ADD SWAP1 POP PUSH2 0x17F PUSH1 0x0 DUP4 ADD DUP5 PUSH2 0x15B JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH2 0x190 DUP3 PUSH2 0x269 JUMP JUMPDEST SWAP2 POP PUSH2 0x19B DUP4 PUSH2 0x269 JUMP JUMPDEST SWAP3 POP DUP3 PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF SUB DUP3 GT ISZERO PUSH2 0x1D0 JUMPI PUSH2 0x1CF PUSH2 0x273 JUMP JUMPDEST JUMPDEST DUP3 DUP3 ADD SWAP1 POP SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH2 0x1E6 DUP3 PUSH2 0x269 JUMP JUMPDEST SWAP2 POP PUSH2 0x1F1 DUP4 PUSH2 0x269 JUMP JUMPDEST SWAP3 POP DUP2 PUSH32 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF DIV DUP4 GT DUP3 ISZERO ISZERO AND ISZERO PUSH2 0x22A JUMPI PUSH2 0x229 PUSH2 0x273 JUMP JUMPDEST JUMPDEST DUP3 DUP3 MUL SWAP1 POP SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 PUSH2 0x240 DUP3 PUSH2 0x269 JUMP JUMPDEST SWAP2 POP PUSH2 0x24B DUP4 PUSH2 0x269 JUMP JUMPDEST SWAP3 POP DUP3 DUP3 LT ISZERO PUSH2 0x25E JUMPI PUSH2 0x25D PUSH2 0x273 JUMP JUMPDEST JUMPDEST DUP3 DUP3 SUB SWAP1 POP SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x0 DUP2 SWAP1 POP SWAP2 SWAP1 POP JUMP JUMPDEST PUSH32 0x4E487B7100000000000000000000000000000000000000000000000000000000 PUSH1 0x0 MSTORE PUSH1 0x11 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST PUSH2 0x2AB DUP2 PUSH2 0x269 JUMP JUMPDEST DUP2 EQ PUSH2 0x2B6 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xC6 0xB3 0xB6 MULMOD 0xA9 ORIGIN NUMBER PUSH28 0xB0EAE99A4777DDE79117818710D97F7B415C23F7DC3EA7164736F6C PUSH4 0x43000800 STOP CALLER ",
+                        "sourceMap": "120:342:0:-:0;;;159:1;145:15;;120:342;;;;;;;;;;;;;;;;"
+                    }
+                },
+                "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"add\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"multiply\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"subtract\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"Calculator.sol\":\"Calculator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"Calculator.sol\":{\"keccak256\":\"0x68010fee816c9c15374a61e36aff783668a474d4966c3c73eb575744f1cfe0bf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7c78382616b1c08801e80653193f8a46933bd2f1bce5beb0f2d1cf86a5d69c60\",\"dweb:/ipfs/QmPrFpjk17rcAPjrcSiyRHcR6Qbdpm6mneX3WLAwKZVznu\"]}},\"version\":1}"
+            }
+        }
+    },
+    "sources": {
+        "Calculator.sol": {
+            "id": 0
+        }
+    }
+}
