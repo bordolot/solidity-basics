@@ -1,0 +1,11 @@
+
+
+# ignore all venv
+
+venv-solidity-project_1/
+venv-solidity-project_2/
+compiled/
+
+.env
+.vscode
+
