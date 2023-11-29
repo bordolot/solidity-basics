@@ -7,12 +7,13 @@ load_dotenv()
 
 
 # this is a test account with fake money
-my_address = "0x69C865CDe579017Aa01B45B134678199a070c18f"
+my_address = os.getenv("MY_ADDRESS")
 private_key = os.getenv("PRIVATE_KEY")
 
 
 name_1 = "first_file"
 name_2 = "MySecondContract"
+name_3 = "MyThirdContract"
 
 
 # create we3 provider
@@ -41,7 +42,10 @@ def create_contract(file_name, *args):
 
 
 try:
-    create_contract(name_1, "MAKE MY DAY", 11)
+    # create_contract(name_1, "MAKE MY DAY", 11)
+    # create_contract(name_2)
+    create_contract(name_3)
+
 except FileNotFoundError as e:
     print("FAIL: no such file")
 except TypeError as e:

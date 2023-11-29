@@ -5,6 +5,7 @@ import os
 
 name_1 = "first_file"
 name_2 = "MySecondContract"
+name_3 = "MyThirdContract"
 
 
 def compile_solidity_file(file_name):
@@ -42,7 +43,7 @@ def compile_solidity_file(file_name):
 
 
 try:
-    compile_solidity_file(name_2)
+    compile_solidity_file(name_3)
 except FileNotFoundError as e:
     print("no such file")
 
