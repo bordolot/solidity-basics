@@ -26,4 +26,21 @@ contract Modifiers {
     ) public onlyOwner validateData(_newOwner) {
         owner = _newOwner;
     }
+
+    modifier noReentrancy(){
+        require(!locked, "No reentrancy");
+        locked = true;
+        _;
+        locked = false;
+    }
+
+    function decrement(uint256 i) public noReentrancy(){
+        x -= 1;
+        if(i > 1){
+            decrement(i -1);
+        }
+    }
+
+
+
 }
