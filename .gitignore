@@ -1,11 +1,11 @@
-
-
 # ignore all venv
-venv-solidity-project_1/
-venv-solidity-project_2/
+venv-solidity-projects/
 
 # ignore all compiled files
 compiled/
+
+# ignore imported sol libraries
+ImportedSolLibraries/
 
 # ignore all internal variables
 .env
