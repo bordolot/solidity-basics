@@ -42,9 +42,9 @@ def create_contract(file_name, *args):
 
 
 try:
-    # create_contract(name_1, "MAKE MY DAY", 11)
+    create_contract(name_1, "MAKE MY DAY", 11)
     # create_contract(name_2)
-    create_contract(name_3)
+    # create_contract(name_3)
 
 except FileNotFoundError as e:
     print("FAIL: no such file")

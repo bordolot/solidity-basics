@@ -43,7 +43,7 @@ def compile_solidity_file(file_name):
 
 
 try:
-    compile_solidity_file(name_3)
+    compile_solidity_file(name_1)
 except FileNotFoundError as e:
     print("no such file")
 

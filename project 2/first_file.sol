@@ -32,5 +32,5 @@ contract first_file {
         my_string = _my_string;
     }
 
-    function do_nothing() public {}
+    function do_nothing(uint256 _num, address _addr) public {}
 }
