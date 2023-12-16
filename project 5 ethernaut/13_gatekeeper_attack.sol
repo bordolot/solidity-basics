@@ -21,9 +21,27 @@ contract Attack {
         gate = IGatekeeperOne(_calledContractAddress);
     }
 
-    function getProperInput() public view returns (bytes memory) {
-        bytes memory result = abi.encodePacked(uint16(uint160(tx.origin)));
-        return result;
+    // function getProperInput() public view returns (bytes memory) {
+    //     bytes memory result = abi.encodePacked(uint16(uint160(tx.origin)));
+    //     return result;
+    // }
+
+    function getProperInput()
+        public
+        view
+        returns (address, uint160, uint16, uint)
+    {
+        address q = tx.origin;
+        uint160 w = uint160(tx.origin);
+        uint16 e = uint16(uint160(tx.origin));
+        uint r = uint256(uint16(uint160(tx.origin)));
+
+        // uint256 largeValueUint = uint256(uint16(uint160(tx.origin))); // Convert to uint256
+        // uint64 shiftedValue = uint64(largeValueUint); // Shift right by 256-64 bits
+        // bytes8 rightmostBytes = bytes8(shiftedValue); // Cast back to bytes8
+        // return rightmostBytes;
+
+        return (q, w, e, r);
     }
 
     function directAttack(bytes8 _pass, uint _gas) public {

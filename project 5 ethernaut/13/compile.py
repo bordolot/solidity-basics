@@ -7,6 +7,8 @@ name_1 = "13_gatekeeper"
 contract_name_1 = "GatekeeperOne"
 name_2 = "13_gatekeeper_attack"
 contract_name_2 = "Attack"
+name_3 = "00_test"
+contract_name_3 = "TestContract"
 
 def compile_solidity_file(file_name, contract_name):
     with open("../"+file_name+".sol", 'r') as file:
@@ -49,6 +51,7 @@ def compile(file_name,contract_name):
         print("no such file")
 
 
-compile(name_2,contract_name_2)
-
+# compile(name_1,contract_name_1)
+# compile(name_2,contract_name_2)
+compile(name_3,contract_name_3)
 

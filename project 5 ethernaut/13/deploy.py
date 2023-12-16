@@ -15,7 +15,8 @@ name_1 = "13_gatekeeper"
 contract_name_1 = "GatekeeperOne"
 name_2 = "13_gatekeeper_attack"
 contract_name_2 = "Attack"
-
+name_3 = "00_test"
+contract_name_3 = "TestContract"
 
 # create we3 provider
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
@@ -42,10 +43,10 @@ def create_contract(file_name,contract_name, *args):
     tran_hash =  w3.eth.send_raw_transaction(signed_transaction.rawTransaction)
     print("SUCCESS: Contract deployed.")
 
-def deploy(file_name, contract_name):
+def deploy(file_name, contract_name, *args):
     try:
-        create_contract(file_name,contract_name,"0x426E04785cd626C6889bf5E6e37cdCf2DCa6e2F5")
         # create_contract(file_name,contract_name)
+        create_contract(file_name,contract_name,*args)
         # create_contract(file_name,contract_name, Web3.to_bytes(text="password").ljust(32, b'\0'))
 
     except FileNotFoundError as e:
@@ -73,5 +74,6 @@ def to_bytes32(input):
 
 # print(b"password".hex())
 
-
-deploy(name_2,contract_name_2)
+# deploy(name_1,contract_name_1)
+# deploy(name_2,contract_name_2,"0xE3c0C2DA6b84D003252Db8EBb5bB4383ea5B9f61")
+deploy(name_3,contract_name_3)
