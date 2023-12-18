@@ -13,3 +13,6 @@ ImportedSolLibraries/
 # and the rest
 .vscode
 
+# test files
+TEST*
+
