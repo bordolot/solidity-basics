@@ -14,7 +14,7 @@ contract_name_1 = "GatekeeperOne"
 name_2 = "13_gatekeeper_attack"
 contract_name_2 = "Attack"
 
-name_3 = "00_test"
+name_3 = "TEST"
 contract_name_3 = "TestContract"
 
 # address and creds
@@ -109,15 +109,15 @@ def get_input(file_name, contract_name):
     elif file_name==name_2:
         contract_address = "0x03A094853A57a34DBB5E76C20F0573dE8431c3eB"
     elif file_name==name_3:
-        contract_address = "0x924fc5C17b8eBf533f2EE76b5Cff772cA300AeB9"
+        contract_address = "0x3CEEA292055c25004A5746261EEe30f38BB660AA"
     return (abi,contract_address)
 
 def interact():
     try:
         # get_variable(name_1, contract_name_1)
         # get_variable(name_2, contract_name_2)
-        get_variable(name_3, contract_name_3)
-        # change_some_values(name_3, contract_name_3)
+        # get_variable(name_3, contract_name_3)
+        change_some_values(name_3, contract_name_3)
         
     except FileNotFoundError as e:
         print("FAIL: no such file")
@@ -156,7 +156,7 @@ def send_ether():
     # send transaction
     tx_hash = w3.eth.send_raw_transaction(signed_add_txn.rawTransaction)
 
-interact()
+# interact()
 # send_ether()
 
 #  0x\x00\x00\x00\x00\x00\x00\x87\x11
@@ -183,3 +183,27 @@ def test(_abi, _contract_address):
     # this gives legit contracts address e.g. 
     # 0x13997C24536d6266B871B6478e803F186F3B6ffD
 
+def test_2(_abi, _contract_address):
+    my_address = os.getenv("MY_ADDRESS")
+    private_key = os.getenv("PRIVATE_KEY")
+
+    abi = _abi # contracts abi 
+    contract_address = _contract_address # contracts address
+
+    # connect to contract
+    w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+    nonce = w3.eth.get_transaction_count(my_address)
+    contract = w3.eth.contract(address=contract_address,abi=abi)
+
+    add_transaction = contract.functions.testTest().build_transaction({ "from":my_address, "nonce":nonce})
+    # sign transaction
+    signed_add_txn = w3.eth.account.sign_transaction(add_transaction, private_key=private_key)
+    # send this signed transaction
+    tx_hash = w3.eth.send_raw_transaction(signed_add_txn.rawTransaction)
+    receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
+    print("Transaction receipt mined:")
+    pprint.pprint(dict(receipt))
+
+
+(a, b) = get_input(name_3, contract_name_3)
+test(a,b)

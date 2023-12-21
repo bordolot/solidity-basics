@@ -15,7 +15,7 @@ name_1 = "13_gatekeeper"
 contract_name_1 = "GatekeeperOne"
 name_2 = "13_gatekeeper_attack"
 contract_name_2 = "Attack"
-name_3 = "00_test"
+name_3 = "TEST"
 contract_name_3 = "TestContract"
 
 # create we3 provider
