@@ -16,3 +16,5 @@ ImportedSolLibraries/
 # test files
 TEST*
 
+private/
+basic-projects/

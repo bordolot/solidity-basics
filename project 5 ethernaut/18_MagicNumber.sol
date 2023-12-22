@@ -23,3 +23,6 @@ contract SolveSolver {
         emit Log(addr);
     }
 }
+//0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+//0x0000000000000000000000000000000000000000000000000000000000000001
+//"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
