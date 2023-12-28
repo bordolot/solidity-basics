@@ -2,6 +2,8 @@
 pragma solidity ^0.8.0;
 
 contract MyContract {
+    function foo(uint _num1, uint _num2) public {}
+
     function fooStart(
         IFoo target
     )
@@ -10,9 +12,10 @@ contract MyContract {
         returns (bytes32, bytes32, bytes32, bytes32, bytes32, bytes32)
     {
         bytes[] memory data = new bytes[](3);
-        data[0] = abi.encode(0x12);
-        data[0] = abi.encode(0x34);
-        data[0] = abi.encode(0x56);
+        // data[0] = abi.encode(0x12);
+        data[0] = abi.encodeWithSelector(this.foo.selector, 100, 10);
+        data[1] = abi.encode(0x34);
+        data[2] = abi.encode(0x56);
         (
             bytes32 data_1,
             bytes32 data_2,
